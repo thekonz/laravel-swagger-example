@@ -1,0 +1,33 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Test API",
+        "description": "This is a test project for swaggervel",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/persons": {
+            "get": {
+                "summary": "List all persons",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Pet"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Person": {
+            "xml": {
+                "name": "Person"
+            }
+        }
+    }
+}
