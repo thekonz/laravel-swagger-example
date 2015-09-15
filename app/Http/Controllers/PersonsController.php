@@ -30,7 +30,17 @@ class PersonsController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+            'persons' => [
+                [
+                    'id' => 1,
+                    'name' => 'Peter',
+                    'thoughts' => [
+                        'yolo',
+                    ],
+                ],
+            ],
+        ]);
     }
 
     /**
@@ -94,7 +104,13 @@ class PersonsController extends Controller
      */
     public function show($id)
     {
-        //
+        return response()->json([
+            'id' => $id,
+            'name' => 'Peter',
+            'thoughts' => [
+                'yolo',
+            ],
+        ]);
     }
 
     /**

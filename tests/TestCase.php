@@ -22,4 +22,14 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         return $app;
     }
+
+    /**
+     * @param $key
+     * @return $this
+     */
+    public function seeJsonHasKey($key)
+    {
+        $this->assertArrayHasKey($key, json_decode($this->response->getContent(), true));
+        return $this;
+    }
 }
